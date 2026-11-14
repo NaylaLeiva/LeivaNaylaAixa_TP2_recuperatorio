@@ -1263,7 +1263,6 @@ Transform:
   - {fileID: 369957836}
   - {fileID: 740888913}
   - {fileID: 1500126517}
-  - {fileID: 392946897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &100731510
@@ -9663,7 +9662,6 @@ GameObject:
   - component: {fileID: 392946897}
   - component: {fileID: 392946899}
   - component: {fileID: 392946898}
-  - component: {fileID: 392946900}
   m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
@@ -9679,12 +9677,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392946896}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.11, y: -4.4, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 100731509}
+  m_Father: {fileID: 1517750404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!154 &392946898
 TerrainCollider:
@@ -9747,20 +9745,6 @@ Terrain:
   m_EnableTreesAndDetailsRayTracing: 0
   m_EnableHeightmapLODFrustumCulling: 1
   m_TreeMotionVectorModeOverride: 3
---- !u!114 &392946900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392946896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ab20818a3f36af43827d3d804657153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MudZone
-  speedMultiplier: 0.5
-  damagePerTick: 3
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -22740,6 +22724,75 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: e10d77a5ffddac942a88f25dc3a7a354, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &1517750401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517750404}
+  - component: {fileID: 1517750403}
+  - component: {fileID: 1517750402}
+  m_Layer: 0
+  m_Name: MudZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1517750402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517750401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab20818a3f36af43827d3d804657153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MudZone
+  speedMultiplier: 0.5
+  damagePerTick: 3
+--- !u!65 &1517750403
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517750401}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.843714, y: 1.1346135, z: 9.733101}
+  m_Center: {x: 4.9011984, y: -0.75824106, z: 4.9906635}
+--- !u!4 &1517750404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517750401}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.16, y: 0.4, z: -8.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 392946897}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1521392104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32167,3 +32220,4 @@ SceneRoots:
   - {fileID: 1025737246}
   - {fileID: 552831301}
   - {fileID: 1034328531}
+  - {fileID: 1517750404}
