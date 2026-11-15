@@ -43,8 +43,7 @@ Se diseñó una plataforma de curación identificable visualmente mediante luz p
 
 ## Requisitos Opcionales Implementados
 **Opción D - Zona de Desaceleración / Barro (`MudZone.cs`):** Área delimitada por un collider trigger que reduce la velocidad de desplazamiento del jugador al 50% (`SetSpeedMultiplier(0.5f)`) al ingresar y la restablece a su valor original al salir.
-**Opción F - Zona de Gas Tóxico / Peligro (`MudZone.cs`):** Zona de riesgo que descuenta salud de forma paulatina por ticks (`damagePerTick`) mientras el jugador permanece dentro del área, respetando el cooldown de inmunidad.
-
+**Opción F - Zona de Gas Tóxico / Peligro (ToxicGasZone.cs): Zona de riesgo complementada con un sistema visual de humo (Particle System), la cual descuenta salud de forma paulatina por tics (damagePerTick) mediante un intervalo de tiempo controlado (damageInterval) mientras el jugador permanece dentro del área.
 ---
 
 ## Capturas del Juego en Ejecución
