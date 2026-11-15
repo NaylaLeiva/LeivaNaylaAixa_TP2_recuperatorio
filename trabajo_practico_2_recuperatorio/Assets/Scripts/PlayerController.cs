@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 10f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float mouseSensitivity = 8f;
-    private float speedMultiplier = 1f; //Modifica MudZone
+    private float speedMultiplier = 1f; // Modifica MudZone
 
     [Header("Detección de Suelo (Raycast)")]
     [SerializeField] private float groundCheckDistance = 1.1f;
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         isRunning = Input.GetKey(KeyCode.LeftShift) && verticalInput > 0f;
 
-        // 2. Rotación horizontal del cuerpo del jugador
+        // 2. Rotación horizontal del cuerpo del jugador (Corregido con *)
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         transform.Rotate(Vector3.up * mouseX);
 
@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
+        // Corregido con el operador de multiplicación (*)
         float currentSpeed = (isRunning ? runSpeed : walkSpeed) * speedMultiplier;
         Vector3 moveDirection = (transform.forward * verticalInput + transform.right * horizontalInput).normalized;
         Vector3 targetVelocity = moveDirection * currentSpeed;
